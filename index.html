@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UTC Time API</title>
+</head>
+<body>
+  <script>
+    // Khi người dùng truy cập, trả về thời gian UTC dưới dạng JSON
+    const getCurrentUTCTime = () => {
+      const now = new Date();
+      const response = {
+        utcTime: now.toISOString(),
+        message: "Current UTC time fetched successfully!"
+      };
+      return response;
+    };
+
+    // Trả JSON response
+    const response = getCurrentUTCTime();
+    document.body.textContent = JSON.stringify(response);
+  </script>
+</body>
+</html>
